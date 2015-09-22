@@ -1,0 +1,5 @@
+R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\classes\debug
+R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-43dc23f7dbbfd4ee9401c52c4ad30e410a3c8122.jar
+R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-d44661e0c622775aeaa57ba03beef4c5e93c5336.jar
+R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\classes-42999a56c31ccdb920c31c7f0f77db65342f266b.jar
+R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\classes-00920ad4897499286e6b05af498436e8a53c4ea6.jar

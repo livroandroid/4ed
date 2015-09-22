@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloContatos</string>
+
+    <string name="title_activity_lista_contatos">Lista Contatos</string>
+    <string name="action_add">Adicionar</string>
+
+    <string name="action_sms_intent">por Intent</string>
+    <string name="action_sms_api">pela API</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

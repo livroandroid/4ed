@@ -1,0 +1,2 @@
+https://github.com/livroandroid/carros/tree/master/Passo06-RecyclerView/Carros
+https://github.com/livroandroid/carros/tree/master/Passo07-RecyclerView-Detalhes/Carros

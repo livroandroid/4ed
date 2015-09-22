@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/0.0.8/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d071aceb5701564f28273aa4422e8fd2d3ef346c">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/pre-dexed/debug/classes-68a9970476aae541b832b56c6bc31408267982b0.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-8676968ab8e12379a1d2add709c7a48ed05c10e0.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-2b0aeb4aedf5feccc00046f27f0df579cbf98d51.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/pre-dexed/debug/classes-3166405e0dc71aaaf795664d7e642d6a9e44408a.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/pre-dexed/debug/classes-99624c647289bb5b8ac49c3e698977e021405f09.jar" />
+    </item>
+
+</items>

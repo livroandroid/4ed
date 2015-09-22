@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerNavDrawerListViewHeader"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/userBackground_layout_height"
+    android:layout_gravity="start"
+    android:background="#ff0000"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/imgUserBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/userBackground_layout_height"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/nav_drawer_header"
+        android:scaleType="fitXY" />
+
+    <livroandroid.lib.view.RoundedImageView
+        android:id="@+id/imgUserPhoto"
+        android:layout_width="@dimen/userPhoto_layout_width"
+        android:layout_height="@dimen/userPhoto_layout_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/userPhoto_layout_marginLeft"
+        android:layout_marginTop="32dp" />
+
+    <ImageView
+        android:id="@+id/imgUserPhotoTwo"
+        android:layout_width="@dimen/userPhotoTwo_layout_width"
+        android:layout_height="@dimen/userPhotoTwo_layout_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imgUserPhoto"
+        android:layout_marginRight="@dimen/userPhotoTwo_layout_marginRight" />
+
+    <ImageView
+        android:id="@+id/imgUserPhotoTree"
+        android:layout_width="@dimen/userPhotoTree_layout_width"
+        android:layout_height="@dimen/userPhotoTree_layout_height"
+        android:layout_alignTop="@+id/imgUserPhotoTwo"
+        android:layout_marginRight="@dimen/userPhotoTree_layout_marginRight"
+        android:layout_toLeftOf="@+id/imgUserPhotoTwo"
+        android:layout_toStartOf="@+id/imgUserPhotoTwo" />
+
+    <LinearLayout
+        android:id="@+id/userData"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/userData_layout_height"
+        android:layout_alignBottom="@+id/imgUserBackground"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/userData_layout_marginBottom"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tUserName"
+            fontPath="fonts/Roboto-Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/userName_layout_marginLeft"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/userName_textSize" />
+
+        <TextView
+            android:id="@+id/tUserEmail"
+            fontPath="fonts/Roboto-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/userEmail_layout_marginLeft"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/userEmail_textSize" />
+
+    </LinearLayout>
+</RelativeLayout><!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/layout/nav_drawer_listview_header.xml --><!-- From: file:/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap27/HelloService/app/build/intermediates/exploded-aar/br.com.livroandroid/android-utils/0.0.8/res/layout/nav_drawer_listview_header.xml -->

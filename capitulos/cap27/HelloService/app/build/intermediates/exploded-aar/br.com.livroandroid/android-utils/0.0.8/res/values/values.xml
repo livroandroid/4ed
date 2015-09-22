@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/values/attrs_rounded_image_view.xml -->
+    <eat-comment/>
+    <attr format="string" name="fontPath"/>
+    <declare-styleable name="CircularImageView"><attr format="boolean" name="border"/><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/><attr format="boolean" name="shadow"/></declare-styleable>
+    <declare-styleable name="ScrimInsetsView"><attr format="reference|color" name="insetForeground"/></declare-styleable>
+    <declare-styleable name="Theme"><attr format="reference" name="circularImageViewStyle"/></declare-styleable>
+    <!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="navigation_drawer_width">260dp</dimen>
+    <!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/values/dimens_nav_drawer_listview_header.xml -->
+    <eat-comment/>
+    <dimen name="userBackground_layout_height">164dp</dimen>
+    <dimen name="userData_layout_height">56dp</dimen>
+    <dimen name="userData_layout_marginBottom">8dp</dimen>
+    <dimen name="userEmail_layout_marginLeft">16dp</dimen>
+    <dimen name="userEmail_textSize">14sp</dimen>
+    <dimen name="userName_layout_marginLeft">16dp</dimen>
+    <dimen name="userName_textSize">14sp</dimen>
+    <dimen name="userPhotoTree_layout_height">40dp</dimen>
+    <dimen name="userPhotoTree_layout_marginRight">16dp</dimen>
+    <dimen name="userPhotoTree_layout_width">40dp</dimen>
+    <dimen name="userPhotoTwo_layout_height">40dp</dimen>
+    <dimen name="userPhotoTwo_layout_marginRight">16dp</dimen>
+    <dimen name="userPhotoTwo_layout_width">40dp</dimen>
+    <dimen name="userPhoto_layout_height">64dp</dimen>
+    <dimen name="userPhoto_layout_marginLeft">16dp</dimen>
+    <dimen name="userPhoto_layout_marginTop">16dp</dimen>
+    <dimen name="userPhoto_layout_width">64dp</dimen>
+    <!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">AndroidUtils</string>
+    <!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/values/strings_nav_drawer.xml -->
+    <eat-comment/>
+    <string name="empty"/>
+    <!-- From: file:/R:/Git/AndroidUtils/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+</resources>

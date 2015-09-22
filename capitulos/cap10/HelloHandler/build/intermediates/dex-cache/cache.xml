@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Usuário\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-43dc23f7dbbfd4ee9401c52c4ad30e410a3c8122.jar" />
+    </item>
+    <item
+        jar="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-d44661e0c622775aeaa57ba03beef4c5e93c5336.jar" />
+    </item>
+    <item
+        jar="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\classes-00920ad4897499286e6b05af498436e8a53c4ea6.jar" />
+    </item>
+    <item
+        jar="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="R:\Git\capitulos\cap10\Ex1-HelloHandler\app\build\intermediates\pre-dexed\debug\classes-42999a56c31ccdb920c31c7f0f77db65342f266b.jar" />
+    </item>
+
+</items>

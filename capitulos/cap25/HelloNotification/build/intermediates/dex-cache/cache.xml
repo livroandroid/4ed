@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/pre-dexed/debug/classes-e2b64cb9281cbeabd9d3fc8191224d2e300ec07d.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-3a68e6ef2aaada9657a562cbf3fee8c3d5889907.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-a07c28c93bbecf29d83620636d474cbf0f30ab61.jar" />
+    </item>
+    <item
+        jar="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/ricardo/AndroidStudioProjects/LivroAndroid/capitulos/cap25/HelloNotification/app/build/intermediates/pre-dexed/debug/classes-6e70c0962c51578f371ff3bef5e1a231dff330dc.jar" />
+    </item>
+
+</items>

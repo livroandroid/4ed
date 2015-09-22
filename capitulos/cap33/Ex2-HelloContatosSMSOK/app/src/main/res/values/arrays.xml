@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="popup_sms">
+        <item>@string/action_sms_intent</item>
+        <item>@string/action_sms_api</item>
+    </array>
+</resources>
