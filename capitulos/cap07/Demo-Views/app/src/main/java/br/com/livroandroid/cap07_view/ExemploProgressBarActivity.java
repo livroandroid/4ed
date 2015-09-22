@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 public class ExemploProgressBarActivity extends Activity {
     private static final String TAG = "livro";
     private ProgressBar mProgress;
+    private boolean alive = true;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -24,6 +25,10 @@ public class ExemploProgressBarActivity extends Activity {
                 new Thread(new Runnable() {
                     public void run() {
                         for (int i = 0; i <= 100; i++) {
+                            if(!alive) {
+                                Log.d(TAG, "Fim Progress");
+                                break;
+                            }
                             final int progress = i;
                             // Atualiza a barra de progresso
                             runOnUiThread(new Runnable() {
@@ -43,6 +48,12 @@ public class ExemploProgressBarActivity extends Activity {
                 }).start();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        alive = false;
     }
 }
 
