@@ -1,0 +1,10 @@
+<resources>
+    <!-- Cores do Tema Material
+    http://www.google.com/design/spec/style/color.html#color-color-palette
+    -->
+    <color name="primary">#F44336</color>
+    <color name="primary_dark">#C62828</color>
+    <color name="accent">#B2FF59</color>
+    <color name="control_highlight">#76FF03</color>
+
+</resources>

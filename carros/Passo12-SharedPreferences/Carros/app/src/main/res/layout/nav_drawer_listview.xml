@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listViewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Cabeçalho para o Drawer (Material Design) -->
+    <include layout="@layout/nav_drawer_listview_header" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray"
+        android:gravity="center"
+        android:text="Livro Android - Todos os direitos reservados"
+        android:textColor="?attr/colorPrimary" />
+
+</LinearLayout>

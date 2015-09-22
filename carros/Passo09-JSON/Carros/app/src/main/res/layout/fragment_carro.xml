@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/foto_carro_width"
+                android:layout_height="@dimen/foto_carro_height"
+                android:layout_gravity="center"
+                android:scaleType="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/gray" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/primary_dark"
+                    android:layout_margin="8dp"/>
+            </ScrollView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

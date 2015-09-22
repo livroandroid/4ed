@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="AppTheme.NavDrawer" parent="AppTheme">
+        <!-- Habilita o overlay mode na action bar -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+
+    </style>
+
+</resources>

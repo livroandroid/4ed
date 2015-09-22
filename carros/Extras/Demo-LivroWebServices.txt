@@ -1,0 +1,26 @@
+Exemplo do livro Web Services RESTful
+
+http://www.livrowebservices.com.br
+
+Este app funciona somente se o web service estiver publicado na nuvem, conforme demonstrado no livro.
+
+Na épóca que fiz o projeto, o web service estava em:
+
+http://livrowebservices.com.br/rest/carros/
+
+Este app utiliza a Material Design Library:
+
+- MenuDrawer
+- Tabs
+- Web Services RESTFul
+- Exemplo de Google Play Services - localização
+- Mapas V2
+- Player de Vídeo
+- POST no servidor para salvar os dados no web service
+- Tirar foto com a câmera e publicar.
+
+Código-fonte:
+
+https://github.com/livrowebservices/capitulos/tree/master/cap19-client-android/Carros
+
+Qualquer feedback, entrar em contato: rlecheta@gmail.com

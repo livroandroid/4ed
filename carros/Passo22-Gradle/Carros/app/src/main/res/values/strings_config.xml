@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="provider">br.com.livroandroid.carros</string>
+
+    <!--
+    SHA1: C1:66:56:93:DF:DE:0B:B9:DC:ED:76:D7:65:B7:10:DC:1F:3F:0D:41
+    -->
+    <string name="API_KEY">AIzaSyDYCu8-Ijlg-dug-VzT1SC_6fekDKn0oTQ</string>
+
+</resources>
