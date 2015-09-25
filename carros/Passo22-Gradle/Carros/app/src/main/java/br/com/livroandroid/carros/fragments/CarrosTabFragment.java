@@ -18,7 +18,7 @@ import livroandroid.lib.utils.Prefs;
  */
 public class CarrosTabFragment extends BaseFragment {
 
-    private TableLayout tableLayout;
+    private SlidingTabLayout tableLayout;
     private ViewPager viewPager;
 
     @Override

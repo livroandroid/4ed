@@ -21,12 +21,10 @@ public class CarroActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Atualiza o carro no fragment
-        if(savedInstanceState != null) {
-            CarroFragment cf = (CarroFragment) getSupportFragmentManager().findFragmentById(R.id.CarroFragment);
-            Carro c = (Carro) getIntent().getSerializableExtra("carro");
-            cf.setCarro(c);
+        CarroFragment cf = (CarroFragment) getSupportFragmentManager().findFragmentById(R.id.CarroFragment);
+        Carro c = (Carro) getIntent().getSerializableExtra("carro");
+        cf.setCarro(c);
 
-            getSupportActionBar().setTitle(c.nome);
-        }
+        getSupportActionBar().setTitle(c.nome);
     }
 }
