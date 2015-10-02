@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -18,7 +19,7 @@ import br.com.livroandroid.contatos.agenda.Contato;
 /**
  * Mostra como utilizar o SimpleCursorAdapter diretamente
  */
-public class ListaContatosActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class ListaContatosActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

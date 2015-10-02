@@ -2,6 +2,7 @@ package br.com.livroandroid.contatos.exemplo1;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -17,7 +18,7 @@ import br.com.livroandroid.contatos.agenda.Contato;
 /**
  * Utiliza a classe Agenda para buscar no content contatos.
  */
-public class ListaContatosActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class ListaContatosActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
