@@ -3,10 +3,8 @@ package br.com.livroandroid.hellobarcodereader;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,11 +12,10 @@ import android.widget.Toast;
 
 /**
  * Lê um cod barras QR Code
- *
+ * <p/>
  * http://zxing.appspot.com/generator/
- *
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +28,19 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("com.google.zxing.client.android.SCAN");
-                if(IntentUtils.isAvailable(context,intent)) {
+                if (IntentUtils.isAvailable(context, intent)) {
                     startActivityForResult(intent, 0);
                 } else {
-                    Toast.makeText(context,"Instale o app Barcode Scanner",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Instale o app Barcode Scanner", Toast.LENGTH_SHORT).show();
 
-                    intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("market://details?id=com.google.zxing.client.android"));
-                    startActivity(intent);
+                    if (IntentUtils.isAvailable(context, intent)) {
+                        intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse("market://details?id=com.google.zxing.client.android"));
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(context, "Google Play nao disponivel", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });

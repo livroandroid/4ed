@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClickMostrarCarroPeloNome(View view) {
+    public void onClickMostrarFerrariFF(View view) {
         Uri uri = Uri.parse("carros://br.com.livroandroid.carros/carros/Ferrari FF");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK && requestCode == 99) {
-            // Lê as informações do carro selecionado
+            // Le os dados do carro selecionado
             String nome = data.getStringExtra("nome");
             String url_foto = data.getStringExtra("url_foto");
             Log.d("livroandroid", "Foto: " + url_foto);

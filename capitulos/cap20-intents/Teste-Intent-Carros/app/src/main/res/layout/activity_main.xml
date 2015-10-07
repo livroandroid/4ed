@@ -12,14 +12,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onClickMostrarCarroPeloNome"
-        android:text="Mostrar Carro pelo Nome" />
+        android:onClick="onClickMostrarFerrariFF"
+        android:text="@string/mostrar_ferrari" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickSelecionarCarro"
-        android:text="Selecionar um carro" />
+        android:text="@string/selecionar" />
     <!-- Nome do carro -->
     <EditText
         android:id="@+id/tNomeCarro"
