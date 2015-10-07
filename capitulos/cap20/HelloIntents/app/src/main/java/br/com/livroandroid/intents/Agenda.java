@@ -1,22 +1,17 @@
 package br.com.livroandroid.intents;
 
-import android.content.ContentResolver;
-import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.ContactsContract;
 import android.provider.ContactsContract.Contacts;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Implementa com o Content Provider do Android 2.x
- * <p/>
+ * <p>
  * content://com.android.contacts/contacts
  *
  * @author ricardo

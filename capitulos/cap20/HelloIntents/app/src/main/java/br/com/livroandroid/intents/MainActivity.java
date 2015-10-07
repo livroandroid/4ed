@@ -1,23 +1,25 @@
 package br.com.livroandroid.intents;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     //Para identificar a chamada no método onActivityResult
     private static final int ACTIVITY_SIM_NAO = 1;
@@ -34,7 +36,6 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 "Enviar E-mail",
                 "Enviar SMS",
                 "Abrir Browser",
-
                 "Mapa - Lat/Lng",
                 "Mapa - Endereco",
                 "Mapa - Rota",
@@ -59,6 +60,44 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         setContentView(listView);
         listView.setOnItemClickListener(this);
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));
+
+
+        // Solicita as permissões
+        String[] permissoes = new String[]{
+                Manifest.permission.CALL_PHONE,
+                Manifest.permission.READ_CONTACTS,
+        };
+        PermissionUtils.validate(this, 0, permissoes);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        for (int result : grantResults) {
+            if (result == PackageManager.PERMISSION_DENIED) {
+                // Alguma permissão foi negada, agora é com você :-)
+                alertAndFinish();
+                return;
+            }
+        }
+        // Se chegou aqui está OK :-)
+    }
+
+    private void alertAndFinish() {
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.app_name).setMessage("Para utilizar este aplicativo, você precisa aceitar as permissões.");
+            // Add the buttons
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    finish();
+                }
+            });
+            android.support.v7.app.AlertDialog dialog = builder.create();
+            dialog.show();
+
+        }
     }
 
     @Override
@@ -71,8 +110,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                     startActivity(intent);
                     break;
                 case 1:
-                     uri = Uri.parse("tel:12345678");
-                     intent = new Intent(Intent.ACTION_DIAL, uri);
+                    uri = Uri.parse("tel:12345678");
+                    intent = new Intent(Intent.ACTION_DIAL, uri);
                     startActivity(intent);
                     break;
                 case 2:
@@ -87,7 +126,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 case 3:
                     // SMS
                     uri = Uri.parse("sms:12345678");
-                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO,uri);
+                    Intent smsIntent = new Intent(Intent.ACTION_SENDTO, uri);
                     smsIntent.putExtra("sms_body", "Olá");
                     startActivity(smsIntent);
                     break;
@@ -192,12 +231,10 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
                 showToastImageView(bitmap);
             }
-        }
-
-        else if (codigo == 13 && resultado == Activity.RESULT_OK) {
+        } else if (codigo == 13 && resultado == Activity.RESULT_OK) {
             Uri uri = it.getData();
-            Log.d(TAG,"Contato Uri: " + uri);
-            Contato contato = Agenda.getContato(this,uri);
+            Log.d(TAG, "Contato Uri: " + uri);
+            Contato contato = Agenda.getContato(this, uri);
 
             //Toast.makeText(this,"Contato: " + contato.nome + " - " + contato.fones+ " - " + contato.emails + " - " + contato.foto, Toast.LENGTH_LONG).show();
 
