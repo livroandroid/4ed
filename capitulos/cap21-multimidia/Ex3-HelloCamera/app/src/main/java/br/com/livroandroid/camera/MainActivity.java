@@ -3,10 +3,10 @@ package br.com.livroandroid.camera;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -19,7 +19,7 @@ import livroandroid.lib.utils.ImageResizeUtils;
 import livroandroid.lib.utils.SDCardUtils;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
     // Caminho para salvar o arquivo
     private File file;
     private ImageView imgView;
@@ -77,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
             int h = imgView.getHeight();
             Bitmap bitmap = ImageResizeUtils.getResizedImage(Uri.fromFile(file), w, h, false);
             Toast.makeText(this, "w/h:" + imgView.getWidth() + "/" + imgView.getHeight() + " > " + "w/h:" + bitmap.getWidth() + "/" + bitmap.getHeight(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "file:" + file, Toast.LENGTH_SHORT).show();
 
             imgView.setImageBitmap(bitmap);
         }
