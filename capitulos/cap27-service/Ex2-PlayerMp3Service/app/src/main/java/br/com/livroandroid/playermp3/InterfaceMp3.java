@@ -7,14 +7,14 @@ package br.com.livroandroid.playermp3;
  *
  */
 public interface InterfaceMp3 {
-	// Inicia a música
+	// Inicia a musica
 	void play(String mp3);
-	// Faz pause da música
+	// Faz pause da musica
 	void pause();
-	// Para a música
+	// Para a musica
 	void stop();
-	// true se está tocando
+	// true se esta tocando
 	boolean isPlaying();
-	// Caminho da música
+	// Caminho da musica
 	String getMp3();
 }

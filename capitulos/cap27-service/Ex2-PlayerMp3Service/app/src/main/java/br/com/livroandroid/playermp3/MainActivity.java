@@ -1,12 +1,16 @@
 package br.com.livroandroid.playermp3;
 
+import android.Manifest;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.os.IBinder;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -24,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
     private ServiceConnection conexao = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
             // (*3*)
-            // Recupera a interface para interagir com o serviço
+            // Recupera a interface para interagir com o servico
             Mp3Service.Mp3ServiceBinder conexao = (Mp3Service.Mp3ServiceBinder) service;
             interfaceMp3 = conexao.getInterface();
             Log.d(TAG, "onServiceConnected, interfaceMp3 conectada: " + interfaceMp3);
@@ -45,11 +49,48 @@ public class MainActivity extends ActionBarActivity {
         Log.d(TAG, "Iniciando o service");
         // (*1*)
         startService(intent);
-        // Faz o bind/ligação
+        // Faz o bind
         // (*2*)
         boolean b = bindService(intent, conexao, Context.BIND_AUTO_CREATE);
         Log.d(TAG,"Service conectado: " + b);
+
+        // Solicita as permissÃµes
+        String[] permissoes = new String[]{
+                Manifest.permission.READ_EXTERNAL_STORAGE
+        };
+        PermissionUtils.validate(this, 0, permissoes);
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        for (int result : grantResults) {
+            if (result == PackageManager.PERMISSION_DENIED) {
+                // Alguma permissÃ£o foi negada, agora Ã© com vocÃª :-)
+                alertAndFinish();
+                return;
+            }
+        }
+        // Se chegou aqui estÃ¡ OK :-)
+    }
+
+    private void alertAndFinish() {
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.app_name).setMessage("Para utilizar este aplicativo, vocÃª precisa aceitar as permissÃµes.");
+            // Add the buttons
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    finish();
+                }
+            });
+            android.support.v7.app.AlertDialog dialog = builder.create();
+            dialog.show();
+
+        }
+    }
+
     public void onClickPlay(View view) {
         // (*4*)
         if(interfaceMp3 != null) {
@@ -77,14 +118,14 @@ public class MainActivity extends ActionBarActivity {
         super.onStop();
         if(interfaceMp3 != null && interfaceMp3.isPlaying()) {
             // (*5*)
-            Log.d(TAG, "Activity destruida. A música continua.");
+            Log.d(TAG, "Activity destruida. A musica continua.");
             unbindService(conexao);
-            // Cria a notificação para o usuário voltar ao player.
+            // Cria a notificacao para o usuario voltar ao player.
             String mp3 = interfaceMp3.getMp3();
             NotificationUtil.create(this, 1, new Intent(this, MainActivity.class),R.mipmap.ic_launcher, "MP3 Player", mp3);
         } else {
             // (*7*)
-            Log.d(TAG, "Activity destruida. Para o serviço, pois não existe música tocando.");
+            Log.d(TAG, "Activity destruida. Para o servico, pois nao existe musica tocando.");
             unbindService(conexao);
             stopService(new Intent(this, Mp3Service.class));
         }

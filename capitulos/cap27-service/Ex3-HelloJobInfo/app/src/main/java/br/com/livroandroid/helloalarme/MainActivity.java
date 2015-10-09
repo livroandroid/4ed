@@ -22,5 +22,7 @@ public class MainActivity extends Activity {
 
     public void onClickCancelar(View view) {
         JobUtil.cancel(this, 1);
+
+        Toast.makeText(this, "Job cancelado", Toast.LENGTH_SHORT).show();
     }
 }
