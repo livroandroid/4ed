@@ -1,7 +1,7 @@
 package br.com.livroandroid.contatos;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -13,7 +13,7 @@ import br.com.livroandroid.contatos.agenda.Agenda;
  *
  * @author rlecheta
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,9 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_add) {
             Agenda a = new Agenda(this);
-            a.addContato("Mickey","999999999",R.drawable.mickey);
-            a.addContato("Pateta","888888888",R.drawable.pateta);
-            a.addContato("Donald","777777777",R.drawable.donald);
+            a.addContato("Mickey", "999999999", R.drawable.mickey);
+            a.addContato("Pateta", "888888888", R.drawable.pateta);
+            a.addContato("Donald", "777777777", R.drawable.donald);
             Toast.makeText(this, "Contatos adicionados com sucesso.", Toast.LENGTH_SHORT).show();
             return true;
         }

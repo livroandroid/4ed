@@ -11,7 +11,7 @@ import android.widget.TextView;
  * Created by Ricardo Lecheta on 10/09/2014.
  */
 public class PlanetaAdapter extends BaseAdapter {
-    private String[] planetas = new String[]{"Mercúrio", "Venus", "Terra", "Marte", "Júptier",
+    private String[] planetas = new String[]{"Mercúrio", "Vênus", "Terra", "Marte", "Júpiter",
             "Saturno", "Urano", "Netuno", "Plutão"};
     private Context context;
 

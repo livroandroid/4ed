@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
+    <fragment android:id="@+id/PlanetasFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         class="br.com.livroandroid.planetas.PlanetasFragment"
