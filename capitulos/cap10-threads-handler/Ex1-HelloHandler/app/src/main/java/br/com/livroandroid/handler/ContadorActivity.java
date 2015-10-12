@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 /**
- * Mostra como fazer um contador com o handler de forma que o código fique se atualizando
+ * Mostra como fazer um contador com o handler de forma que o codigo fique se atualizando
  */
 public class ContadorActivity extends AppCompatActivity implements Runnable {
     private static final String CATEGORIA = "livro";

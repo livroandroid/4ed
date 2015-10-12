@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            // Mostra o ProgressBar para fazer a animação
+            // Mostra o ProgressBar para fazer a animacao
             progress.setVisibility(View.VISIBLE);
         }
 

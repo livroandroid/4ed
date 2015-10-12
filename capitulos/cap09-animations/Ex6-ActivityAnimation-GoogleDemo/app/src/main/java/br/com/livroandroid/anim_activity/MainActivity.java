@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 /**
- * Exemplo baseado no código do video do Youtube:
+ * Exemplo baseado no codigo do video do Youtube:
  * Dev Bytes - Window Animation (https://www.youtube.com/watch?v=Ho8vk61lVIU)
  */
 public class MainActivity extends AppCompatActivity {
