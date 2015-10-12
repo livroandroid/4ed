@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
         applicationId "br.com.livroandroid.hellowsdl"
         minSdkVersion 9
-        targetSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -20,23 +20,17 @@ android {
 }
 
 repositories {
-    maven {
-        url "file:///home/ricardo/gradle/rep"
-    }
-    maven {
-        url "file:///r:/home/ricardo/gradle/rep"
-    }
     // Repositório do KSOAP2
     maven { url 'http://ksoap2-android.googlecode.com/svn/m2-repo' }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.0'
+    compile 'com.android.support:appcompat-v7:23.0.1'
 
     // Biblioteca KSOAP2 para web services WSDL
     compile 'com.google.code.ksoap2-android:ksoap2-android:3.1.1'
 
     // Biblioteca com classes utilitárias do livro
-    compile 'br.com.livroandroid:android-utils:0.0.5'
+    compile 'br.com.livroandroid:android-utils:1.0.2'
 }

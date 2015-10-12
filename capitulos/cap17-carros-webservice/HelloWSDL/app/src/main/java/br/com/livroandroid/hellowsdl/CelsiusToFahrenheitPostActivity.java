@@ -45,7 +45,8 @@ public class CelsiusToFahrenheitPostActivity extends AppCompatActivity {
 
                 try {
                     // Retorno: <string xmlns="http://www.w3schools.com/webservices/">33.8</string>
-                    String s = HttpHelper.doPost(URL, params, "UTF-8");
+                    HttpHelper http = new HttpHelper();
+                    String s = http.doPost(URL, params, "UTF-8");
 
                     Element root = XMLUtils.getRoot(s, "UTF-8");
 

@@ -15,7 +15,7 @@ import android.widget.Toast;
  *
  * 3) Foi demonstrado a API da Toolbar
  *
- * 4) Resultado: Ambas Action Bar e Toolbar estão no layout.
+ * 4) Resultado: Ambas Action Bar e Toolbar estao no layout.
  */
 public class MainActivity extends AppCompatActivity {
     @Override

@@ -8,17 +8,17 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 /**
- * 1) Esta activity desligou a action bar padrão pelo Tema
+ * 1) Esta activity desligou a action bar padrao pelo Tema
  *
  * android:theme="@style/AppTheme.NoActionBar"
  *
  * 2) Foi adicionado a Toolbar no layout
  *
- * 3) A toolbar é setada como a ActionBar
+ * 3) A toolbar eh setada como a ActionBar
  *
  * setSupportActionBar(toolbar);
  *
- * 4) De resto pode usar os métodos da action bar normalmente.
+ * 4) De resto pode usar os metodos da action bar normalmente.
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Aqui é a mágica (A toolbar será a action bar).
+        // Aqui eh a magica (A toolbar sera a action bar).
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
