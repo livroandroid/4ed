@@ -22,8 +22,14 @@ public class PlanetaActivity extends AppCompatActivity {
     }
 
     @Override
-    public void finish() {
-        super.finish();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Up Navigation - voltando com animação
+            case android.R.id.home:
+                supportFinishAfterTransition();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

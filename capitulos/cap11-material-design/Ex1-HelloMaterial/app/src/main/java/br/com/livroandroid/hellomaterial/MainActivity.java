@@ -1,10 +1,13 @@
 package br.com.livroandroid.hellomaterial;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -90,16 +93,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void show(Intent intent) {
-        // Check if we're running on Android 5.0 or higher
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            startActivity(intent,
-                    ActivityOptions
-                            .makeSceneTransitionAnimation(this).toBundle());
-        } else {
-            startActivity(intent);
-        }
+        /**
+         * Classe compat para compatibilidade
+         */
+        Bundle opts = ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle();
+        ActivityCompat.startActivity(this,intent,opts );
     }
 
     @Override
