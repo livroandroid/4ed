@@ -2,7 +2,7 @@ package br.com.livroandroid.sensores;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,7 +15,7 @@ import android.widget.Toast;
  * @author rlecheta
  */
 
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
         setContentView(R.layout.activity_main);
 
-        String[] items = new String[] {
+        String[] items = new String[]{
                 "Listar Sensores",
                 "Luminosidade",
                 "Pressao",
@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 "Acelerômetro Jogo/Boneco",
                 "Giroscopio",
                 "Google Fit",
-                "Sair" };
+                "Sair"};
 
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));

@@ -32,24 +32,28 @@ public class ListaDevicesActivity extends BluetoothCheckActivity implements Adap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_devices);
         listView = (ListView) findViewById(R.id.listView);
-        // Inicia a lista com os devices pareados
-        lista = new ArrayList<BluetoothDevice>(btfAdapter.getBondedDevices());
-        // Registra o receiver para receber as mensagens de dispositivos pareados
-        this.registerReceiver(mReceiver, new IntentFilter(BluetoothDevice.ACTION_FOUND));
-        // Register for broadcasts when discovery has finished
-        this.registerReceiver(mReceiver, new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED));
+        if(btfAdapter != null) {
+            // Inicia a lista com os devices pareados
+            lista = new ArrayList<BluetoothDevice>(btfAdapter.getBondedDevices());
+            // Registra o receiver para receber as mensagens de dispositivos pareados
+            this.registerReceiver(mReceiver, new IntentFilter(BluetoothDevice.ACTION_FOUND));
+            // Register for broadcasts when discovery has finished
+            this.registerReceiver(mReceiver, new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED));
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();        // Garante que não existe outra busca sendo realizada
-        if (btfAdapter.isDiscovering()) {
-            btfAdapter.cancelDiscovery();
+        if(btfAdapter != null) {
+            if (btfAdapter.isDiscovering()) {
+                btfAdapter.cancelDiscovery();
+            }
+            // Dispara a busca
+            btfAdapter.startDiscovery();
+            dialog = ProgressDialog.show(this, "Exemplo", "Buscando dispositivos bluetooth...",
+                    false, true);
         }
-        // Dispara a busca
-        btfAdapter.startDiscovery();
-        dialog = ProgressDialog.show(this, "Exemplo", "Buscando dispositivos bluetooth...",
-                false, true);
     }
 
     // Receiver para receber os broadcasts do bluetooth
@@ -94,9 +98,9 @@ public class ListaDevicesActivity extends BluetoothCheckActivity implements Adap
         // Garante que a busca é cancelada ao sair
         if (btfAdapter != null) {
             btfAdapter.cancelDiscovery();
+            // Cancela o registro do receiver
+            this.unregisterReceiver(mReceiver);
         }
-        // Cancela o registro do receiver
-        this.unregisterReceiver(mReceiver);
     }
 
     private void updateLista() {

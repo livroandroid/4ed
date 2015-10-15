@@ -8,8 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import livroandroid.lib.utils.AndroidUtils;
-
 /**
  * Created by Usuário on 07/04/2015.
  */
@@ -56,20 +54,20 @@ public class BonecoAndroidView extends View {
         return px;
     }
 
-    public void setDx(int dx) {
-        this.dx = dx;
+    public int getDy() {
+        return dy;
     }
 
     public void setDy(int dy) {
         this.dy = dy;
     }
 
-    public int getDy() {
-        return dy;
-    }
-
     public int getDx() {
         return dx;
+    }
+
+    public void setDx(int dx) {
+        this.dx = dx;
     }
 
     public Drawable getDrawable() {

@@ -5,74 +5,73 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 /**
  * @author Ricardo Lecheta
- * 
  */
-public class ProximidadeActivity extends ActionBarActivity implements
-		SensorEventListener {
+public class ProximidadeActivity extends AppCompatActivity implements
+        SensorEventListener {
 
-	private static final int TIPO_SENSOR = Sensor.TYPE_PROXIMITY;
-	private SensorManager sensorManager;
-	private Sensor sensor;
-	private SeekBar progress;
+    private static final int TIPO_SENSOR = Sensor.TYPE_PROXIMITY;
+    private SensorManager sensorManager;
+    private Sensor sensor;
+    private SeekBar progress;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_sensor_seekbar);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sensor_seekbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
-		progress = (SeekBar) findViewById(R.id.progress);
 
-		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        progress = (SeekBar) findViewById(R.id.progress);
 
-		if (sensorManager.getDefaultSensor(TIPO_SENSOR) != null) {
-			sensor = sensorManager.getDefaultSensor(TIPO_SENSOR);
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
-			// Define o valor maximo no ProgressBar
-			float max = sensor.getMaximumRange();
-			progress.setMax((int) max);
-			
-			Toast.makeText(this, "Sensor TYPE_PROXIMITY max " + max, Toast.LENGTH_SHORT).show();
-		} else {
-			Toast.makeText(this, "Sensor TYPE_PROXIMITY não disponível", Toast.LENGTH_SHORT).show();
-			
-		}
-	}
+        if (sensorManager.getDefaultSensor(TIPO_SENSOR) != null) {
+            sensor = sensorManager.getDefaultSensor(TIPO_SENSOR);
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		if (sensor != null) {
-			sensorManager.registerListener(this, sensor,
-					SensorManager.SENSOR_DELAY_NORMAL);
-		}
-	}
+            // Define o valor maximo no ProgressBar
+            float max = sensor.getMaximumRange();
+            progress.setMax((int) max);
 
-	@Override
-	protected void onPause() {
-		super.onPause();
-		sensorManager.unregisterListener(this);
-	}
+            Toast.makeText(this, "Sensor TYPE_PROXIMITY max " + max, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Sensor TYPE_PROXIMITY não disponível", Toast.LENGTH_SHORT).show();
 
-	@Override
-	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		// Mudou o status de precisão do sensor
-	}
+        }
+    }
 
-	@Override
-	public void onSensorChanged(SensorEvent event) {
-		float valor = event.values[0];
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (sensor != null) {
+            sensorManager.registerListener(this, sensor,
+                    SensorManager.SENSOR_DELAY_NORMAL);
+        }
+    }
 
-		((TextView) findViewById(R.id.tValor)).setText("Proximidade: " + valor);
-		
-		progress.setProgress((int)valor);
-	}
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        // Mudou o status de precisão do sensor
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        float valor = event.values[0];
+
+        ((TextView) findViewById(R.id.tValor)).setText("Proximidade: " + valor);
+
+        progress.setProgress((int) valor);
+    }
 }

@@ -2,17 +2,13 @@ package br.com.livroandroid.sensores;
 
 import android.content.Intent;
 import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -23,7 +19,7 @@ import java.util.List;
  *
  * @author rlecheta
  */
-public class ListaSensoresActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class ListaSensoresActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private SensorManager sensorManager;
     private List<Sensor> sensorList;
@@ -59,8 +55,8 @@ public class ListaSensoresActivity extends ActionBarActivity implements AdapterV
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 
         // Vai para tela que vai ligar este sensor
-        Intent intent = new Intent(this,TestSensorActivity.class);
-        intent.putExtra("position",position);
+        Intent intent = new Intent(this, TestSensorActivity.class);
+        intent.putExtra("position", position);
         startActivity(intent);
     }
 }
