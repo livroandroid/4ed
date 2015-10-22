@@ -44,7 +44,7 @@
             android:name=".activity.prefs.ConfiguracoesV11Activivity"
             android:label="@string/title_activity_configuracoes_activivity"
             android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/AppThemeMaterial">
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.com.livroandroid.carros.activity.MainActivity" />
